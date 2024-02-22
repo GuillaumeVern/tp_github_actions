@@ -15,3 +15,6 @@ class TestSimpleMath(unittest.TestCase):
 
     def test_soustraction(self):
         self.assertEqual(SimpleMath.soustraction(8, 2), (6))
+
+if __name__== "__main__":
+    unittest.main()

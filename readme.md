@@ -36,3 +36,6 @@ class TestSimpleMath(unittest.TestCase):
 ```
 
 ### 4. push sur github + création du workflow
+
+
+![alt text](image-3.png)
