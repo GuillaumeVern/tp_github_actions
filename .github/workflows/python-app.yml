@@ -42,4 +42,4 @@ jobs:
       run: docker build -t "tp_workflow" .
 
     - name: Running test container
-      run: docker run -it "tp_workflow"
+      run: docker run "tp_workflow"
