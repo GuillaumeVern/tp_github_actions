@@ -35,7 +35,67 @@ class TestSimpleMath(unittest.TestCase):
         self.assertEqual(SimpleMath.soustraction(8, 2), (6))
 ```
 
-### 4. push sur github + création du workflow
+### 4. et 5. push sur github + création du workflow
 
 
 ![alt text](image-3.png)
+
+le workflow s'est exécuté correctement lors du push suivant
+![alt text](image-4.png)
+
+
+### 6. ajout de l'étape de lint avec pylint
+
+![alt text](image-5.png)
+
+test du nouveau workflow avec un push
+![alt text](image-6.png)
+
+modification du code python pour etre conforme
+```py
+""" module to test the SimpleMath class """
+import unittest
+
+class SimpleMath:
+    """
+    A class that provides basic mathematical operations.
+    """
+
+    @staticmethod
+    def addition(a, b):
+        """
+        Adds two numbers and returns the result.
+
+        Parameters:
+        a (int): The first number.
+        b (int): The second number.
+
+        Returns:
+        int: The sum of the two numbers.
+        """
+        return a + b
+
+    @staticmethod
+    def soustraction(a, b):
+        """
+        Subtracts two numbers and returns the result.
+
+        Parameters:
+        a (int): The first number.
+        b (int): The second number.
+
+        Returns:
+        int: The difference between the two numbers.
+        """
+        return a - b
+
+class TestSimpleMath(unittest.TestCase):
+    def test_addition(self):
+        self.assertEqual(SimpleMath.addition(17, 12) , 29)
+
+    def test_soustraction(self):
+        self.assertEqual(SimpleMath.soustraction(8, 2), (6))
+
+if __name__== "__main__":
+    unittest.main()
+```
