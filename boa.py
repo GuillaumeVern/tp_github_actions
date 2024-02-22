@@ -35,10 +35,19 @@ class SimpleMath:
         return a - b
 
 class TestSimpleMath(unittest.TestCase):
+    """
+    A class that provides test cases for the SimpleMath class.
+    """
     def test_addition(self):
+        """
+        Tests the addition method of the SimpleMath class.
+        """
         self.assertEqual(SimpleMath.addition(17, 12) , 29)
 
     def test_soustraction(self):
+        """
+        Tests the soustraction method of the SimpleMath class.
+        """
         self.assertEqual(SimpleMath.soustraction(8, 2), (6))
 
 if __name__== "__main__":
